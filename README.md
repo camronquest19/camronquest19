@@ -19,23 +19,15 @@ Active furniture business operating as Treasure Valley Sectional Depot.
 - 77 five-star reviews on Facebook Marketplace
 - **Profitable, operating since 2024**
 
-### 🧠 [Commander / Builder / Sentinel](https://github.com/camronquest19/commander-builder-sentinel) — Multi-agent system
-Spec-driven, three-agent loop that orchestrates personal ops via Telegram. Anthropic SDK + grammY + TypeScript.
-- **Commander** dispatches incoming intent
-- **Builder** executes the task
-- **Sentinel** validates the output, retries on rejection
-- **Status:** v0.2 — three-agent loop working end-to-end. Iterating in public.
-
 ## Engineering practice
 
-- **AI-driven workflow as the default.** Daily Claude Code + MCP with custom hooks, sub-agents, slash commands, and a fleet of MCP servers (Playwright, Neon, filesystem, Gmail, Calendar, Notion, FreeCAD, Blender).
+- **AI-driven workflow as the default.** Daily Claude Code + MCP user with custom hooks, sub-agents, slash commands, and a fleet of MCP servers (Playwright, Neon, filesystem, Gmail, Calendar, Notion, FreeCAD, Blender).
 - **~50% of every line of production code I ship is AI-assisted.** Not a special mode, just the baseline.
-- **Spec-driven sub-agent design.** Each role gets a tight prompt and isolated tool surface. Easier to debug, easier to evolve.
 - **Polyglot through structured study.** Comfortable ramping on unfamiliar stacks via AI-assisted learning — but I'll always flag the gap rather than fake it.
 
 ## Stack
 
-TypeScript · React · Python · Node.js · PostgreSQL · Stripe · REST · OAuth · Web scraping infrastructure · Anthropic SDK · MCP · Claude Code · Railway · Vercel
+TypeScript · React · Python · Node.js · PostgreSQL · Stripe · REST · OAuth · Web scraping infrastructure · Claude Code · MCP · Railway · Vercel
 
 ## Where to find me
 
@@ -46,8 +38,8 @@ TypeScript · React · Python · Node.js · PostgreSQL · Stripe · REST · OAut
 
 ## What I'm looking for
 
-Remote senior software roles where AI-driven engineering is the default, not the exception. Especially interested in MCP-native tooling, agent observability, and vertical B2B SaaS.
+Remote senior software roles where AI-driven engineering is the default, not the exception. Especially interested in vertical B2B SaaS, MCP-native tooling, and product-engineering teams.
 
 ---
 
-*I'm self-taught — no CS degree. My evidence is the shipped products and the systems above, not the credential.*
+*I'm self-taught — no CS degree. My evidence is the shipped products above, not the credential.*
