@@ -44,15 +44,23 @@
     return true;
   }
 
+  var VERIFY = {
+    official: { label: '✓ Official live-search page', cls: 'v-official' },
+    signup: { label: '✓ Always-open application', cls: 'v-signup' },
+    aggregator: { label: '~ Aggregator — check each date', cls: 'v-aggregator' },
+  };
+
   function card(j) {
     const el = document.createElement('article');
     el.className = 'card';
+    var v = VERIFY[j.verify] || VERIFY.aggregator;
     el.innerHTML =
       '<h3>' + j.title + '</h3>' +
       '<div class="pay">' + j.pay + '</div>' +
       '<div class="tags">' +
         '<span class="tag cat">' + j.category + '</span>' +
         '<span class="tag format">' + j.format + '</span>' +
+        '<span class="tag verify ' + v.cls + '">' + v.label + '</span>' +
       '</div>' +
       (j.requirements ? '<div class="req">📋 ' + j.requirements + '</div>' : '') +
       (j.notes ? '<div class="notes">💡 ' + j.notes + '</div>' : '') +

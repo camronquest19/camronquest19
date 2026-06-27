@@ -61,6 +61,23 @@ main { max-width: 1100px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
 .chip.active { background: var(--accent-2); color: #04263a; border-color: var(--accent-2); font-weight: 600; }
 .chip.cat.active { background: var(--accent); color: #06331b; border-color: var(--accent); }
 
+.notice {
+  background: #2a2310;
+  border: 1px solid #5c4a16;
+  color: #f0e3c0;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  margin-bottom: 1.25rem;
+  font-size: .88rem;
+  line-height: 1.6;
+}
+.notice .tag { vertical-align: middle; }
+
+.tag.verify { font-weight: 600; }
+.tag.verify.v-official { color: #06331b; background: var(--accent); border-color: var(--accent); }
+.tag.verify.v-signup { color: #04263a; background: var(--accent-2); border-color: var(--accent-2); }
+.tag.verify.v-aggregator { color: #f0e3c0; background: #5c4a16; border-color: #7a6420; }
+
 .stats {
   display: flex; gap: 1rem; flex-wrap: wrap;
   margin-bottom: 1.25rem; color: var(--muted); font-size: .9rem;
