@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Idaho $30+/hr Job Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>💼 $30+/hr Job Finder</h1>
+    <p class="subtitle">Meridian / Boise, Idaho &amp; Idaho-friendly remote &middot; <span id="updated"></span></p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input type="search" id="search" placeholder="Search roles, employers, skills…" aria-label="Search jobs" />
+      <div class="filters" id="categoryFilters"></div>
+      <div class="filters" id="formatFilters"></div>
+    </section>
+
+    <section class="stats" id="stats"></section>
+
+    <section id="jobGrid" class="job-grid"></section>
+
+    <p class="empty" id="emptyState" hidden>No matches — try clearing a filter.</p>
+  </main>
+
+  <footer>
+    <p>Pay figures are approximate market rates for mid-2026 and vary by experience. Always verify on the official posting. Built as a starting map of your options — not every listing is live at every moment.</p>
+  </footer>
+
+  <script src="jobs.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
