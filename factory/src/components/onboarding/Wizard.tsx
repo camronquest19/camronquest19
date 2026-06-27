@@ -64,7 +64,7 @@ const PRICE_UNITS = [
   "per month",
 ] as const;
 
-function emptyDraft(): Draft {
+function emptyDraft(initialPlan?: SiteConfig["plan"]): Draft {
   return {
     vertical: "",
     businessName: "",
@@ -78,7 +78,7 @@ function emptyDraft(): Draft {
     services: [],
     trustBadges: [],
     booking: { ...DEFAULT_BOOKING },
-    plan: "growth",
+    plan: initialPlan ?? "growth",
   };
 }
 
@@ -160,9 +160,9 @@ type SubmitState =
 /* Wizard                                                              */
 /* ------------------------------------------------------------------ */
 
-export function Wizard() {
+export function Wizard({ initialPlan }: { initialPlan?: SiteConfig["plan"] }) {
   const [step, setStep] = useState(0);
-  const [draft, setDraft] = useState<Draft>(emptyDraft);
+  const [draft, setDraft] = useState<Draft>(() => emptyDraft(initialPlan));
   const [showPreview, setShowPreview] = useState(false);
   const [submit, setSubmit] = useState<SubmitState>({ status: "idle" });
   const [checkoutPending, setCheckoutPending] = useState(false);

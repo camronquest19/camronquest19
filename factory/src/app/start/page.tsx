@@ -1,6 +1,7 @@
 import { pageMetadata } from "@/lib/seo";
 import { BRAND } from "@/config/brand";
 import { Wizard } from "@/components/onboarding/Wizard";
+import type { PlanId } from "@/lib/plans";
 
 export const metadata = pageMetadata({
   title: `Launch your site — ${BRAND.name}`,
@@ -9,7 +10,21 @@ export const metadata = pageMetadata({
   path: "/start",
 });
 
-export default function StartPage() {
+const VALID_PLANS: PlanId[] = ["starter", "growth", "pro"];
+
+function planFromParam(value: string | string[] | undefined): PlanId | undefined {
+  const raw = Array.isArray(value) ? value[0] : value;
+  return raw && (VALID_PLANS as string[]).includes(raw) ? (raw as PlanId) : undefined;
+}
+
+export default async function StartPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ plan?: string | string[] }>;
+}) {
+  const params = await searchParams;
+  const initialPlan = planFromParam(params.plan);
+
   return (
     <main className="bg-slate-50/60 pb-24">
       <div className="container-x pt-12 sm:pt-16">
@@ -27,7 +42,7 @@ export default function StartPage() {
       </div>
 
       <div className="container-x mt-10">
-        <Wizard />
+        <Wizard initialPlan={initialPlan} />
       </div>
     </main>
   );

@@ -74,6 +74,16 @@ const SEEDS: SiteConfig[] = [
 
 const store = new Map<string, SiteConfig>(SEEDS.map((s) => [s.slug, s]));
 
+/**
+ * Register/overwrite a tenant site. In production this is an INSERT/UPDATE on
+ * the Postgres `sites` table; here it writes to the in-process store so a newly
+ * onboarded site is immediately viewable while the server is running.
+ */
+export function addSite(config: SiteConfig): SiteConfig {
+  store.set(config.slug, config);
+  return config;
+}
+
 export function getAllSites(): SiteConfig[] {
   return Array.from(store.values());
 }
