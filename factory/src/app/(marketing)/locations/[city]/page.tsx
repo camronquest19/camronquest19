@@ -100,7 +100,7 @@ export default async function CityPage({ params }: CityPageProps) {
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <CTAButton href="/start">Start my {c.name} site</CTAButton>
-          <CTAButton href="/#pricing" variant="ghost">
+          <CTAButton href="/pricing" variant="ghost">
             See pricing
           </CTAButton>
         </div>

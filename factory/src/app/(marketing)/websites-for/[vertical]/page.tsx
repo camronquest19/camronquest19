@@ -105,7 +105,7 @@ export default async function VerticalPage({ params }: VerticalPageProps) {
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <CTAButton href="/start">Start my site</CTAButton>
-          <CTAButton href="/#pricing" variant="ghost">
+          <CTAButton href="/pricing" variant="ghost">
             See pricing
           </CTAButton>
         </div>
